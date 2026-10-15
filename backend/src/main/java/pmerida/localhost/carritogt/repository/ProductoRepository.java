@@ -18,4 +18,8 @@ public class ProductoRepository {
     public List<Producto> listar() {
         return entityManager.createQuery("FROM Producto", Producto.class).getResultList();
     }
+
+    public Producto buscarPorId(Integer idProducto) {
+        return entityManager.find(Producto.class, idProducto);
+    }
 }

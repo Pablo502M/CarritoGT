@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/botones.css" />
+    <link rel="stylesheet" href="assets/css/input.css" />
+    <link rel="stylesheet" href="assets/css/style-shopping-cart.css" />
+    <link rel="stylesheet" href="assets/css/globitos.css" />
+    <link rel="stylesheet" href="assets/css/tblAgl.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet" />
+    <title>CarritoGT</title>
+    <style>
+        .mensaje { position: fixed; top: 10px; right: 10px; padding: 10px 16px;
+                   border-radius: 4px; color: #fff; z-index: 100; }
+        .mensaje.exito { background: #2e7d32; }
+        .mensaje.error { background: #c62828; }
+    </style>
+</head>
+<body>
+    <div id="mensaje" class="mensaje" style="display: none;"></div>
+
+    <h1>Demostración de Carrito de Compra Básico</h1>
+    <h2>Frontend en JavaScript que consume una API REST con Spring Boot</h2>
+
+    <div id="vista-catalogo" class="producto-cuadricula">
+        <div class="cuadricula-titulo">
+            <h3>Catálogo de productos</h3>
+        </div>
+        <div class="div-shopping-cart">
+            <button id="btn-ver-carrito" class="btn-carrito-compra2 apa bor-rad4">
+                Carrito (<span id="contador">0</span>)
+            </button>
+        </div>
+        <div id="lista-productos" class="producto-lista"></div>
+    </div>
+
+    <div id="vista-carrito" class="producto-cuadricula" style="display: none; position: relative;">
+        <div class="cuadricula-titulo">
+            <h3>Carrito de compra</h3>
+        </div>
+        <div class="div-tit">
+            <button id="btn-volver" class="ripple">&larr; Volver al catálogo</button>
+        </div>
+        <div id="contenido-carrito"></div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
